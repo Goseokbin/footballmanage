@@ -38,6 +38,7 @@
 	<resources mapping="/css/**" location="/css/" />
 	<resources mapping="/img/**" location="/img/" />
 	<resources mapping="/js/**" location="/js/" />
+	<resources mapping="/assets/**" location="/assets/" />
 
 	<mvc:interceptors>
 		<mvc:interceptor>
