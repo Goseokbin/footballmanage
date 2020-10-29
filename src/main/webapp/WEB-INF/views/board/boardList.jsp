@@ -9,6 +9,7 @@
 
 		<!-- common CSS -->
 		<link rel="stylesheet" type="text/css" href="/css/common/common.css"/>
+		
 		<script type="text/javascript" src="/js/common/jquery.js"></script>
 		<script type="text/javascript" src="/js/common/board.js"></script>
 

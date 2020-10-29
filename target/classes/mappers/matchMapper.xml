@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 
+	map.jsp에 들어가 게시판.
+	table 생성 쿼리 
+	CREATE TABLE `Accident`.`match` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `team` VARCHAR(45) NOT NULL,
+  `time` DATETIME NOT NULL,
+  `location` VARCHAR(45) NULL,
+  `qty` INT NOT NULL,
+  PRIMARY KEY (`id`, `qty`));
+ -->
+<mapper namespace="com.football.ex.matchMapper">
+
+
+	<select id="getMatchList"
+		parameterType="com.football.ex.form.matchForm"
+		resultType="com.football.ex.dto.matchDto">
+
+		SELECT id
+		, team
+	<!-- 	, CAST( DATE_FORMAT( time, '%y-%m-%d %H:%i:%s' ) AS CHAR(19) ) AS
+ -->		
+ 		,time
+		,location
+		,qty
+		FROM footballmanage.`match`
+		ORDER BY id DESC
+	</select>
+
+
+</mapper>
